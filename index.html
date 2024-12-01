@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Shadow_shopping</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        
+        header {
+            background-color: #52164d;
+            color: rgb(243, 136, 14);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 10px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            font-size: 1.2rem;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        
+        main {
+            padding: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            background-color: white;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-item h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            font-size: 1.2rem;
+            color: #ff5722;
+            margin-bottom: 15px;
+        }
+
+        .product-item button {
+            background-color: #803573;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer {
+            background-color: #581e5a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #ff9800;
+        }
+
+        #cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        #cart span {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div >
+            <h1>SHADOW SHOPPING </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section class="product-list">
+            <div class="product-item">
+                <img src="/images/download (1).jpg" alt="Product 1">
+                <h3>Shirt 1</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/download (2).jpg" alt="Product 2">
+                <h3>Shirt 2</h3>
+                <p class="price">$39.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/download.jpg" alt="Product 3">
+                <h3>Shirt 3</h3>
+                <p class="price">$49.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                    <img src="/images/images4.jpg" alt="Product 1">
+                    <h3>Shirt 4</h3>
+                    <p class="price">$29.99</p>
+                    <button onclick="addToCart()">Add to Cart</button>
+            </div> 
+            <div class="product-item">
+                <img src="/images/download (5).jpg" alt="Product 1">
+                <h3>Gown 1</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/download (3).jpg" alt="Product 1">
+                <h3>Gown 2</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/download (4).jpg" alt="Product 1">
+                <h3>Gown 3</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/download 4.jpg" alt="Product 1">
+                <h3>Gown 4</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/S1.jpg" alt="Product 1">
+                <h3>shoes 1</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/S2.jpg" alt="Product 1">
+                <h3>shoes 2</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/S3.jpg" alt="Product 1">
+                <h3>shoes 3</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="/images/S4.jpg" alt="Product 1">
+                <h3>shoes 4</h3>
+                <p class="price">$29.99</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Explore new fashions by Shadow shopping </p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <div id="cart">
+        <span id="cart-count">0</span> items in cart
+    </div>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+        }
+    </script>
+
+</body>
+</html>
